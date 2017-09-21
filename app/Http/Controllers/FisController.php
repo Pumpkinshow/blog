@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\Models\Database\User;
+use App\Models\OperateFile;
 class FisController extends Controller {
 
     /*
@@ -35,6 +37,13 @@ class FisController extends Controller {
 
     public function test()
     {
+        OperateFile::make();
         return view('test');
+    }
+    public function vue()
+    {
+
+        $users = User::getUsers();
+        return view('vue', ['users' => $users]);
     }
 }

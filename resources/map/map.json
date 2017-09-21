@@ -1,0 +1,117 @@
+{
+    "res": {
+        "page/about.blade.php": {
+            "uri": "about.blade.php",
+            "type": "php"
+        },
+        "page/index.blade.php": {
+            "uri": "index.blade.php",
+            "type": "php",
+            "deps": [
+                "page/index.js"
+            ]
+        },
+        "page/test.blade.php": {
+            "uri": "test.blade.php",
+            "type": "php",
+            "deps": [
+                "static/main/test.js"
+            ]
+        },
+        "page/vue.blade.php": {
+            "uri": "vue.blade.php",
+            "type": "php",
+            "deps": [
+                "static/main/main.js"
+            ]
+        },
+        "widget/footer/footer.blade.php": {
+            "uri": "/widget/footer/footer.blade.php",
+            "type": "php"
+        },
+        "widget/header/header.blade.php": {
+            "uri": "/widget/header/header.blade.php",
+            "type": "php"
+        },
+        "widget/layout/2-cols-with-left.blade.php": {
+            "uri": "/widget/layout/2-cols-with-left.blade.php",
+            "type": "php"
+        },
+        "widget/layout/frame.blade.php": {
+            "uri": "/widget/layout/frame.blade.php",
+            "type": "php"
+        },
+        "widget/layout/front.blade.php": {
+            "uri": "/widget/layout/front.blade.php",
+            "type": "php"
+        },
+        "widget/layout/layout.blade.php": {
+            "uri": "/widget/layout/layout.blade.php",
+            "type": "php"
+        },
+        "widget/sidebar/sidebar.blade.php": {
+            "uri": "/widget/sidebar/sidebar.blade.php",
+            "type": "php"
+        },
+        "page/index.js": {
+            "uri": "/page/index.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "page/index"
+            }
+        },
+        "static/main/test.js": {
+            "uri": "main/test.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "static/main/test"
+            }
+        },
+        "static/main/main.js": {
+            "uri": "main/main.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "static/main/main"
+            },
+            "deps": [
+                "static/common/vue.js",
+                "static/main/App.vue"
+            ]
+        },
+        "static/js/mod.js": {
+            "uri": "js/mod.js",
+            "type": "js"
+        },
+        "static/css/normalize.css": {
+            "uri": "css/normalize.css",
+            "type": "css"
+        },
+        "static/css/style.css": {
+            "uri": "css/style.css",
+            "type": "css"
+        },
+        "widget/sidebar/sidebar.css": {
+            "uri": "/widget/sidebar/sidebar.css",
+            "type": "css"
+        },
+        "static/common/vue.js": {
+            "uri": "common/vue.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "static/common/vue"
+            }
+        },
+        "static/main/App.vue": {
+            "uri": "main/App.js",
+            "type": "js",
+            "deps": [
+                "static/main/App.css"
+            ]
+        },
+        "static/main/App.css": {
+            "uri": "main/App.css",
+            "type": "css"
+        }
+    },
+    "pkg": {}
+}

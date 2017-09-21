@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 Route::get('index', "FisController@index");
 Route::get('test', "FisController@test");
+Route::get('vue', "FisController@vue");
