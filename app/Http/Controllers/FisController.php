@@ -1,8 +1,10 @@
 <?php namespace App\Http\Controllers;
-
+use Illuminate\Http\Request;
+use Response;
 use App\Models\Database\User;
 use App\Models\OperateFile;
 use App\Http\Helpers\Tools;
+use Matriphe\Imageupload\Imageupload;
 class FisController extends Controller {
 
     /*
@@ -34,6 +36,7 @@ class FisController extends Controller {
     public function index()
     {
         $data = array(array("key"=>5,"value"=>"ldkjasjfl"),array("key"=>3,"value"=>"ldkjasjfl"),array("key"=>4,"value"=>"ldkjasjfl"),array("key"=>2,"value"=>"ldkjasjfl"));
+
         return view('index',["data"=>$data]);
     }
 
@@ -44,8 +47,18 @@ class FisController extends Controller {
     }
     public function vue()
     {
-
         $users = User::getUsers();
         return view('vue', ['users' => $users]);
     }
+    public function imgUpload(Request $oRequest,Imageupload $Imageupload,Response $oResponse ){
+
+
+
+        $data = [];
+        if ($oRequest->hasFile('file')) {
+            $data['result'] = $Imageupload->upload($oRequest->file('file'));
+        }
+        return Response::make(['data'=>$data]);
+    }
+
 }

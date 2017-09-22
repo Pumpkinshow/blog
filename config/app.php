@@ -155,7 +155,8 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        //imgs upload
+        Matriphe\Imageupload\ImageuploadServiceProvider::class,
         // 添加 FIS 的 Provider
         'Fis\Providers\ResourceProvider',
 
@@ -205,6 +206,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        //img upload
+        'Imageupload' => Matriphe\Imageupload\ImageuploadFacade::class,
+        //fis
         'Fis'       => 'Fis\Facades\Fis',
 
     ],

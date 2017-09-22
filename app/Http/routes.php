@@ -14,6 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('index', "FisController@index");
+Route::get('index1', "FisController@index");
 Route::get('test', "FisController@test");
 Route::get('vue', "FisController@vue");
+
+Route::any('imageupload', "FisController@imgUpload");

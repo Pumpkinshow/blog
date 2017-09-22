@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<div id="wrapper">@yield('body')</div>
+<div id="app">@yield('body')</div>
 @placeholder('framework')
 @placeholder('scripts')
 </body>

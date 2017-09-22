@@ -8,7 +8,7 @@
             "uri": "index.blade.php",
             "type": "php",
             "deps": [
-                "page/index.js"
+                "static/index/index.js"
             ]
         },
         "page/test.blade.php": {
@@ -53,12 +53,16 @@
             "uri": "/widget/sidebar/sidebar.blade.php",
             "type": "php"
         },
-        "page/index.js": {
-            "uri": "/page/index.js",
+        "static/index/index.js": {
+            "uri": "index/index.js",
             "type": "js",
             "extras": {
-                "moduleId": "page/index"
-            }
+                "moduleId": "static/index/index"
+            },
+            "deps": [
+                "static/common/vue.js",
+                "static/components/ajax/index.js"
+            ]
         },
         "static/main/test.js": {
             "uri": "main/test.js",
@@ -101,6 +105,16 @@
                 "moduleId": "static/common/vue"
             }
         },
+        "static/components/ajax/index.js": {
+            "uri": "components/ajax/index.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "static/components/ajax/index"
+            },
+            "deps": [
+                "static/components/type-of/index.js"
+            ]
+        },
         "static/main/App.vue": {
             "uri": "main/App.js",
             "type": "js",
@@ -111,6 +125,13 @@
         "static/main/App.css": {
             "uri": "main/App.css",
             "type": "css"
+        },
+        "static/components/type-of/index.js": {
+            "uri": "components/type-of/index.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "static/components/type-of/index"
+            }
         }
     },
     "pkg": {}
