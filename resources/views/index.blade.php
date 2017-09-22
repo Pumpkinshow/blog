@@ -14,8 +14,10 @@
 </div>
 
 @script()
-// 同步用法，放心吧，mod.js 支持
-alert(20);
+
+var pageConfig={
+    data:<?php echo json_encode($data); ?>
+}
 var index = require('page/index');
 <!-- index('.btn-duang'); -->
 @endscript

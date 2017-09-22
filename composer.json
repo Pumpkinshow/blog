@@ -7,7 +7,8 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "fex-team/laravel-fis": "*"
+        "fex-team/laravel-fis": "*",
+        "matriphe/imageupload": "6.1.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

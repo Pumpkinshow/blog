@@ -14,7 +14,9 @@
 </div>
 
 @script()
-
+var pageConfig = {
+    data: "{{$data or ''}}",  
+};
 var index = require('static/main/test');
 <!-- index('.btn-duang'); -->
 @endscript

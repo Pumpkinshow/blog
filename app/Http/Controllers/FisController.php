@@ -2,6 +2,7 @@
 
 use App\Models\Database\User;
 use App\Models\OperateFile;
+use App\Http\Helpers\Tools;
 class FisController extends Controller {
 
     /*
@@ -32,13 +33,14 @@ class FisController extends Controller {
      */
     public function index()
     {
-        return view('index');
+        $data = array(array("key"=>5,"value"=>"ldkjasjfl"),array("key"=>3,"value"=>"ldkjasjfl"),array("key"=>4,"value"=>"ldkjasjfl"),array("key"=>2,"value"=>"ldkjasjfl"));
+        return view('index',["data"=>$data]);
     }
 
     public function test()
     {
         OperateFile::make();
-        return view('test');
+        return view('test',['data' => Tools::randStr(12,'URL')]);
     }
     public function vue()
     {
