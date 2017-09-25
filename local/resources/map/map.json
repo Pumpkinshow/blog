@@ -69,7 +69,11 @@
             "type": "js",
             "extras": {
                 "moduleId": "static/main/test"
-            }
+            },
+            "deps": [
+                "static/common/vue.js",
+                "static/components/ajax/index.js"
+            ]
         },
         "static/main/main.js": {
             "uri": "main/main.js",
