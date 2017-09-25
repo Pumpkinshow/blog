@@ -16,7 +16,7 @@ class OperateFile
      * @param
      */
     public static function make(){
-        $myfile = fopen("../files/newfile.txt", "w") or die("Unable to open file!");
+        $myfile = fopen("./files/newfile.txt", "w") or die("Unable to open file!");
         $txt = "Bill Gates\n";
         fwrite($myfile, $txt);
         $txt = "Steve Jobs\n";

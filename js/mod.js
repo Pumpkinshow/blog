@@ -98,21 +98,16 @@ var require, define;
         if (id && id.splice) {
             return require.async.apply(this, arguments);
         }
-        console.log(modulesMap, id);
         id = require.alias(id);
 
-        console.log(666, id);
         var mod = modulesMap[id];
-        console.log(90909);
         if (mod) {
-            console.log(10101);
             return mod.exports;
         }
 
         //
         // init module
         //
-        console.log(factoryMap);
         var factory = factoryMap[id];
         if (!factory) {
             throw '[ModJS] Cannot find module `' + id + '`';

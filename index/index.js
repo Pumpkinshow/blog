@@ -12,7 +12,6 @@ define('static/index/index', function(require, exports, module) {
   
   var _componentsAjaxIndex2 = _interopRequireDefault(_componentsAjaxIndex);
   
-  console.log(_componentsAjaxIndex2['default'], 9090909);
   new _commonVue2['default']({
       delimiters: ['{%', '%}'],
       el: '#app',
@@ -21,9 +20,7 @@ define('static/index/index', function(require, exports, module) {
           url: "",
           file: ""
       },
-      created: function created() {
-          alert(222);
-      },
+      created: function created() {},
       methods: {
           imgChange: function imgChange(event) {
               // console.log(event);
@@ -39,11 +36,9 @@ define('static/index/index', function(require, exports, module) {
               reader.onload = function (e) {
                   self.url = e.target.result;
               };
-              console.log(file);
               var form = new FormData();
               form.append('file', file);
               form.append("_token", self.token);
-              console.log(form.get(file));
               var oReq = new XMLHttpRequest();
               oReq.open("POST", "/imageupload", true);
               oReq.onload = function (oEvent) {

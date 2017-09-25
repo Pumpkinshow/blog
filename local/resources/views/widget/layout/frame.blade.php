@@ -1,4 +1,5 @@
-@section("fis_resource")@require('widget/layout/frame.blade.php')@show<!DOCTYPE html>
+@section("fis_resource")@require('widget/layout/frame.blade.php')@show
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8" />
