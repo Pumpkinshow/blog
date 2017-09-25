@@ -1,5 +1,4 @@
-@section("fis_resource")@require('widget/layout/frame.blade.php')@show
-<!DOCTYPE html>
+@section("fis_resource")@require('widget/layout/frame.blade.php')@show<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8" />
@@ -13,7 +12,7 @@
     <script src="/static/js/html5shiv.js" type="text/javascript"></script>
     <script src="/static/js/response.js" type="text/javascript"></script>
     <![endif]-->
-    @require('static/css/style.css')
+    @require('/static/css/style.css')
     @placeholder('styles')
 </head>
 <body>

@@ -18,7 +18,7 @@ class User
      * @param
      */
     public static function getUsers(){
-        return $users = DB::table('user')->get();
+        return $users = DB::table('q_user')->get();
     }
 
 }

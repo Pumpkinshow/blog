@@ -1,27 +1,20 @@
-@section("fis_resource")@require('widget/layout/layout.blade.php')@show
-<!DOCTYPE html>
+@section("fis_resource")@require('widget/layout/layout.blade.php')@show<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>@yield('title') - FIS &amp; Laravel Demo</title>
+    <meta name="keywords" content="pumpkin blog"/>
+    <meta name="description" content="pumpkin 微博">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <title>pumpkin's blog</title>
+    <link rel="icon" href="./favicon.ico" mce_href="./favicon.ico" type="image/x-icon">
     @framework('static/js/mod.js')
-    @require('static/css/normalize.css')
-    @require('bootstrap/css/bootstrap.css')
-    @require('bootstrap/css/bootstrap-theme.css')
-    <!--[if lt IE 9]>
-    <script src="/static/js/html5shiv.js" type="text/javascript"></script>
-    <script src="/static/js/response.js" type="text/javascript"></script>
-    <![endif]-->
-    @require('static/css/style.css')
+    @require('/static/common/common.css')
     @placeholder('styles')
 </head>
 <body>
-
 <div id="app">
-
     @yield("content")
-
 </div>
 @require('framework')
 @placeholder('scripts')

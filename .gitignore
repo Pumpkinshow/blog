@@ -17,3 +17,4 @@ sftp-config.json
 /nbproject/private/
 .env.bak
 npm-debug.log
+sftp-config.json

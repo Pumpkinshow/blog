@@ -94,10 +94,6 @@
             "uri": "css/normalize.css",
             "type": "css"
         },
-        "static/css/style.css": {
-            "uri": "css/style.css",
-            "type": "css"
-        },
         "widget/sidebar/sidebar.css": {
             "uri": "/widget/sidebar/sidebar.css",
             "type": "css"
