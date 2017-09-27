@@ -1,39 +1,28 @@
-@extends('widget/layout/front.blade.php')
+@extends('widget/layout/manageLayout.blade.php')
 
-@section('title', '欢迎使用 fis3 + laravel 解决方案')
+@require('static/manage/login.css')
+
+@section('title', 'login')
 @section('content')
 
-<div class="container">
-  <div class="page-header">
-    <h2>
-      栗子
-    </h2>
+<div class="content">
+  <div class="login">
+    <ul>
+      <li class="title"><p>management system</p></li>
+      <li class="username"><input type="text" name="username" placeholder="username"></li>
+      <li class="password"><input type="password" name="password" placeholder="password"></li>
+      <li class="remenber"><input type="checkbox" name="remenber" placeholder="username">remenber me!</li>
+      <li class="login"><a id="login" @click="login" href="javascript:void(0);" >login</a></li>
+    </ul>
   </div>
-
-  <button class="btn btn-primary btn-duang">Duang</button>
 </div>
-
-<form ref="form" id="form" action="/imageupload" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="_token" value="{{ Session::token() }}" v-model="token">
-            <pre>lakdjf</pre>
-            <div>
-                <input type="file" multiple="true" name="file" @change="imgChange">
-            </div>
-            <div>
-                <button type="submit">Upload!</button>
-            </div>
-        </form>
-
-
-        <button @click="postfile">ajax上传文件</button>
 
 @script()
 
-var pageConfig={
-    data:<?php echo json_encode($data); ?>,
-    token:"{{ Session::token() }}",
+var pageConfig = {
+
 }
-var index = require('../../static/index/index');
+var index = require('static/manage/login.es6');
 
 @endscript
 

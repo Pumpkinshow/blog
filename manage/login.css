@@ -1,0 +1,83 @@
+html,body{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+#app{
+	height: 100%;
+	width: 100%;
+}
+
+.content{
+	height: 100%;
+	overflow: scroll;
+	position: relative;
+	background:url(/imgs/login_bg1.jpg) no-repeat center center;
+	background-size: cover;
+}
+.bg1,.bg2{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	top: 0;
+	left: 0;
+	background:#32477c;
+}
+.bg2{
+	top: 50%;
+	background:#b7a798;
+}
+.content>.login{
+	position: absolute;
+	width: 420px;
+	padding:20px;
+	border-radius: 6px;
+	border:1px solid #cecece;
+	box-shadow: 1px 1px 1px #666;
+	background: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+li{
+	position: relative;
+	line-height: 50px;
+}
+
+li p{
+	text-align: center;
+	font-size: 30px;
+	color:#333;
+}
+li.title{
+	margin-bottom: 10px;
+}
+li input[type=text],li input[type=password]{
+	padding:5px 10px;
+	font-size: 25px;
+	width: 400px;
+	border-radius: 6px;
+	border: 1px solid #cecece;
+}
+
+li.remenber{
+	text-align: right;
+}
+li input[type=checkbox]{
+	margin-right:10px; 
+	vertical-align:-3px;
+}
+.login a{
+	line-height: 40px;
+	display: block;
+	text-align: center;
+	font-size: 26px;
+	color:#fff;
+	background:#2568ec;
+	width: 150px;
+	height: 40px;
+	margin: 5px auto;
+	border-radius: 6px;
+}

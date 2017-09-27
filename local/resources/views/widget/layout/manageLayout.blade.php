@@ -1,5 +1,4 @@
-@section("fis_resource")@require('widget/layout/manageLayout.blade.php')@show
-<!DOCTYPE html>
+@section("fis_resource")@require('widget/layout/manageLayout.blade.php')@show<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

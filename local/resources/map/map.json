@@ -22,7 +22,7 @@
             "uri": "manage/login.blade.php",
             "type": "php",
             "deps": [
-                "../../static/index/index"
+                "static/manage/login.es6"
             ]
         },
         "page/vue.blade.php": {
@@ -64,6 +64,18 @@
             "uri": "main/index.js",
             "type": "js"
         },
+        "static/manage/login.css": {
+            "uri": "manage/login.css",
+            "type": "css"
+        },
+        "static/manage/login.es6": {
+            "uri": "manage/login.js",
+            "type": "js",
+            "deps": [
+                "static/common/vue.js",
+                "static/components/ajax/index.js"
+            ]
+        },
         "static/css/common.css": {
             "uri": "css/common.css",
             "type": "css"
@@ -91,6 +103,23 @@
             "uri": "/widget/sidebar/sidebar.css",
             "type": "css"
         },
+        "static/common/vue.js": {
+            "uri": "common/vue.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "static/common/vue"
+            }
+        },
+        "static/components/ajax/index.js": {
+            "uri": "components/ajax/index.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "static/components/ajax/index"
+            },
+            "deps": [
+                "static/components/type-of/index.js"
+            ]
+        },
         "static/main/App.vue": {
             "uri": "main/App.js",
             "type": "js",
@@ -101,6 +130,13 @@
         "static/main/App.css": {
             "uri": "main/App.css",
             "type": "css"
+        },
+        "static/components/type-of/index.js": {
+            "uri": "components/type-of/index.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "static/components/type-of/index"
+            }
         }
     },
     "pkg": {}
