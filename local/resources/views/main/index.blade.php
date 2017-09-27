@@ -33,7 +33,7 @@ var pageConfig={
     data:<?php echo json_encode($data); ?>,
     token:"{{ Session::token() }}",
 }
-var index = require('static/index/index');
+var index = require('../../static/index/index');
 
 @endscript
 

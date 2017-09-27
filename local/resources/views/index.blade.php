@@ -6,7 +6,7 @@
 <div class="container">
   <div class="page-header">
     <h2>
-      栗子
+      栗子1111dsaf  sss
     </h2>
   </div>
 
@@ -33,7 +33,7 @@ var pageConfig={
     data:<?php echo json_encode($data); ?>,
     token:"{{ Session::token() }}",
 }
-var index = require('static/index/index');
+var index = require('static/main/index.es6');
 
 @endscript
 

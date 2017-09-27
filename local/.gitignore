@@ -10,13 +10,11 @@ node_modules
 .project
 .settings
 .idea
+/.idea
 *.swp
-.env
-.env.example
 sftp-config.json
 .tags
 .tags_sorted_by_file
 /nbproject/private/
 .env.bak
 npm-debug.log
-sftp-config.json

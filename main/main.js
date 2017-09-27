@@ -4,9 +4,9 @@ define('static/main/main', function(require, exports, module) {
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
   
-  var _commonVueJs = require('static/common/vue');
+  var _commonVueVue = require('../common/vue/vue');
   
-  var _commonVueJs2 = _interopRequireDefault(_commonVueJs);
+  var _commonVueVue2 = _interopRequireDefault(_commonVueVue);
   
   var _AppVue = require('static/main/App.vue');
   
@@ -14,7 +14,7 @@ define('static/main/main', function(require, exports, module) {
   
   alert(555);
   
-  new _commonVueJs2['default']({
+  new _commonVueVue2['default']({
     el: '#app',
     render: function render(h) {
       return h(_AppVue2['default']);
