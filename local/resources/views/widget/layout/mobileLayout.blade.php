@@ -1,4 +1,4 @@
-@section("fis_resource")@require('widget/layout/layout.blade.php')@show
+@section("fis_resource")@require('widget/layout/mobileLayout.blade.php')@show
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
     <title>pumpkin's blog</title>
     <link rel="icon" href="./favicon.ico" mce_href="./favicon.ico" type="image/x-icon">
-    @framework('static/js/mod.js')
+    <script type="text/javascript" src="js/mod.js"></script>
+    <script type="text/javascript" src="js/adapt.js"></script>
+
     @require('static/css/common.css')
     @placeholder('styles')
 </head>

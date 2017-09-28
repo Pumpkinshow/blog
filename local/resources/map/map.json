@@ -25,6 +25,13 @@
                 "static/manage/login.es6"
             ]
         },
+        "page/mobile/index.blade.php": {
+            "uri": "mobile/index.blade.php",
+            "type": "php",
+            "deps": [
+                "static/mobile/index.es6"
+            ]
+        },
         "page/vue.blade.php": {
             "uri": "vue.blade.php",
             "type": "php",
@@ -56,6 +63,10 @@
             "uri": "/widget/layout/manageLayout.blade.php",
             "type": "php"
         },
+        "widget/layout/mobileLayout.blade.php": {
+            "uri": "/widget/layout/mobileLayout.blade.php",
+            "type": "php"
+        },
         "widget/sidebar/sidebar.blade.php": {
             "uri": "/widget/sidebar/sidebar.blade.php",
             "type": "php"
@@ -72,9 +83,13 @@
             "uri": "manage/login.js",
             "type": "js",
             "deps": [
-                "static/common/vue.js",
+                "static/common/vue/dist/vue.js",
                 "static/components/ajax/index.js"
             ]
+        },
+        "static/mobile/index.es6": {
+            "uri": "mobile/index.js",
+            "type": "js"
         },
         "static/css/common.css": {
             "uri": "css/common.css",
@@ -87,7 +102,7 @@
                 "moduleId": "static/main/main"
             },
             "deps": [
-                "../common/vue/vue",
+                "static/common/vue/dist/vue.js",
                 "static/main/App.vue"
             ]
         },
@@ -99,15 +114,19 @@
             "uri": "css/normalize.css",
             "type": "css"
         },
+        "static/js/adapt.js": {
+            "uri": "js/adapt.js",
+            "type": "js"
+        },
         "widget/sidebar/sidebar.css": {
             "uri": "/widget/sidebar/sidebar.css",
             "type": "css"
         },
-        "static/common/vue.js": {
-            "uri": "common/vue.js",
+        "static/common/vue/dist/vue.js": {
+            "uri": "common/vue/dist/vue.js",
             "type": "js",
             "extras": {
-                "moduleId": "static/common/vue"
+                "moduleId": "static/common/vue/dist/vue"
             }
         },
         "static/components/ajax/index.js": {

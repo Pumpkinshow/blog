@@ -21,6 +21,11 @@ Route::group(["prefix" => "manage",'namespace' => 'Manage'], function() {
    // Route::get("/login", "LoginController@login");
 });
 
+Route::group(['namespace' => 'Mobile'], function() {
+   Route::get("/mobile_index", "IndexController@index");
+});
+
+
 Route::get('index1', "FisController@index");
 Route::get('test', "FisController@test");
 Route::get('vue', "FisController@vue");
