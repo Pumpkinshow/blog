@@ -130,3 +130,6 @@ select {
     white-space: nowrap;
     overflow: hidden
 }
+[v-cloak]{
+    display: none;
+}

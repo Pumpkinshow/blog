@@ -87,9 +87,19 @@
                 "static/components/ajax/index.js"
             ]
         },
+        "static/mobile/index.css": {
+            "uri": "mobile/index.css",
+            "type": "css"
+        },
         "static/mobile/index.es6": {
             "uri": "mobile/index.js",
-            "type": "js"
+            "type": "js",
+            "deps": [
+                "static/common/vue/dist/vue.js",
+                "static/components/ajax/index.js",
+                "static/components/vue-swiper/vswiper.vue",
+                "static/components/vue-swiper/item.vue"
+            ]
         },
         "static/css/common.css": {
             "uri": "css/common.css",
@@ -139,6 +149,19 @@
                 "static/components/type-of/index.js"
             ]
         },
+        "static/components/vue-swiper/vswiper.vue": {
+            "uri": "components/vue-swiper/vswiper.js",
+            "type": "js",
+            "deps": [
+                "static/common/vue/dist/vue.js",
+                "static/components/tools/dom.js",
+                "static/components/vue-swiper/vswiper.css"
+            ]
+        },
+        "static/components/vue-swiper/vswiper.css": {
+            "uri": "components/vue-swiper/vswiper.css",
+            "type": "css"
+        },
         "static/main/App.vue": {
             "uri": "main/App.js",
             "type": "js",
@@ -155,6 +178,46 @@
             "type": "js",
             "extras": {
                 "moduleId": "static/components/type-of/index"
+            }
+        },
+        "static/components/tools/dom.js": {
+            "uri": "components/tools/dom.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "static/components/tools/dom"
+            },
+            "deps": [
+                "static/components/tools/util.js"
+            ]
+        },
+        "static/components/tools/util.js": {
+            "uri": "components/tools/util.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "static/components/tools/util"
+            },
+            "deps": [
+                "static/common/vue/dist/vue.js"
+            ]
+        },
+        "static/components/vue-swiper/item.vue": {
+            "uri": "components/vue-swiper/item.js",
+            "type": "js",
+            "deps": [
+                "static/components/tools/event.js",
+                "static/components/tools/dom.js",
+                "static/components/vue-swiper/item.css"
+            ]
+        },
+        "static/components/vue-swiper/item.css": {
+            "uri": "components/vue-swiper/item.css",
+            "type": "css"
+        },
+        "static/components/tools/event.js": {
+            "uri": "components/tools/event.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "static/components/tools/event"
             }
         }
     },
