@@ -1,4 +1,32 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
 #app{
     width: 100%;
     height: 100%;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.item{
+    background: url(mobile/imgs/bg.jpg) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.music{
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: url(mobile/imgs/music.png) center center no-repeat;
+    background-size: 0.3rem 0.3rem;
+
+}
+audio{
+    display:none;
 }

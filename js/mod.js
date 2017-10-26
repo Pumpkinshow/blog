@@ -5,11 +5,9 @@
  *
  * https://github.com/fex-team/mod
  */
-'use strict';
-
 var require, define;
 
-(function (global) {
+(function(global) {
     if (require) return; // 避免重复加载而导致已定义模块丢失
 
     var head = document.getElementsByTagName('head')[0],
@@ -26,30 +24,26 @@ var require, define;
 
         var script = document.createElement('script');
         if (onerror) {
-            var tid;
+            var tid = setTimeout(onerror, require.timeout);
 
-            (function () {
-                var onload = function onload() {
-                    clearTimeout(tid);
-                };
+            script.onerror = function() {
+                clearTimeout(tid);
+                onerror();
+            };
 
-                tid = setTimeout(onerror, require.timeout);
+            function onload() {
+                clearTimeout(tid);
+            }
 
-                script.onerror = function () {
-                    clearTimeout(tid);
-                    onerror();
-                };
-
-                if ('onload' in script) {
-                    script.onload = onload;
-                } else {
-                    script.onreadystatechange = function () {
-                        if (this.readyState == 'loaded' || this.readyState == 'complete') {
-                            onload();
-                        }
-                    };
+            if ('onload' in script) {
+                script.onload = onload;
+            } else {
+                script.onreadystatechange = function() {
+                    if (this.readyState == 'loaded' || this.readyState == 'complete') {
+                        onload();
+                    }
                 }
-            })();
+            }
         }
         script.type = 'text/javascript';
         script.src = url;
@@ -74,12 +68,12 @@ var require, define;
             url = res.url || id;
         }
 
-        createScript(url, onerror && function () {
+        createScript(url, onerror && function() {
             onerror(id);
         });
     }
 
-    define = function (id, factory) {
+    define = function(id, factory) {
         id = id.replace(/\.js$/i, '');
         factoryMap[id] = factory;
 
@@ -92,7 +86,7 @@ var require, define;
         }
     };
 
-    require = function (id) {
+    require = function(id) {
 
         // compatible with require([dep, dep2...]) syntax.
         if (id && id.splice) {
@@ -120,7 +114,7 @@ var require, define;
         //
         // factory: function OR value
         //
-        var ret = typeof factory == 'function' ? factory.apply(mod, [require, mod.exports, mod]) : factory;
+        var ret = (typeof factory == 'function') ? factory.apply(mod, [require, mod.exports, mod]) : factory;
 
         if (ret) {
             mod.exports = ret;
@@ -128,7 +122,7 @@ var require, define;
         return mod.exports;
     };
 
-    require.async = function (names, onload, onerror) {
+    require.async = function(names, onload, onerror) {
         if (typeof names == 'string') {
             names = [names];
         }
@@ -182,7 +176,7 @@ var require, define;
         updateNeed();
     };
 
-    require.resourceMap = function (obj) {
+    require.resourceMap = function(obj) {
         var k, col;
 
         // merge `res` & `pkg` fields
@@ -201,17 +195,16 @@ var require, define;
         }
     };
 
-    require.loadJs = function (url) {
+    require.loadJs = function(url) {
         createScript(url);
     };
 
-    require.loadCss = function (cfg) {
+    require.loadCss = function(cfg) {
         if (cfg.content) {
             var sty = document.createElement('style');
             sty.type = 'text/css';
 
-            if (sty.styleSheet) {
-                // IE
+            if (sty.styleSheet) { // IE
                 sty.styleSheet.cssText = cfg.content;
             } else {
                 sty.innerHTML = cfg.content;
@@ -226,9 +219,11 @@ var require, define;
         }
     };
 
-    require.alias = function (id) {
+
+    require.alias = function(id) {
         return id.replace(/\.js$/i, '');
     };
 
     require.timeout = 5000;
-})(undefined);
+
+})(this);

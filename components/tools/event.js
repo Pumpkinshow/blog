@@ -1,4 +1,4 @@
-define('static/components/tools/event', function(require, exports, module) {
+define('static/components/tools/event.es6', function(require, exports, module) {
 
   'use strict';
   

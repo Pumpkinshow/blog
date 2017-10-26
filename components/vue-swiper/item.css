@@ -3,6 +3,9 @@
 
 
 
-.vm-slider-item{
+
+
+.vue-swiper-item{
     overflow: hidden;
+    display: block;
 }

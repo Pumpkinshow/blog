@@ -4,16 +4,19 @@ define('static/components/vue-swiper/item.vue', function(require, exports, modul
   
   exports.__esModule = true;
   
-  var _event = require('static/components/tools/event');
+  var _event = require('static/components/tools/event.es6');
   
   var _event2 = _interopRequireDefault(_event);
   
-  var _dom = require('static/components/tools/dom');
+  var _dom = require('static/components/tools/dom.es6');
   
   var _dom2 = _interopRequireDefault(_dom);
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
   
+  //
+  //
+  //
   //
   //
   //
@@ -53,7 +56,7 @@ define('static/components/vue-swiper/item.vue', function(require, exports, modul
   }else{
     __vue__options__ = module.exports;
   }
-  __vue__options__.template = "\n<slot></slot>\n"
+  __vue__options__.template = "\n<div class=\"vue-swiper-item\">\n    <slot></slot>\n</div>\n"
   
 
 });

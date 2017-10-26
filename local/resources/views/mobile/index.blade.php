@@ -6,15 +6,31 @@
 @section('content')
 
 <div class="container">
-    <Vswiper :source="imgs">
-        
-    <Item>lkajsldfljadlkfj</Item>
-    <Item>lkajsldfljadlkfj</Item>
-    <Item>lkajsldfljadlkfj</Item>
-    <Item>lkajsldfljadlkfj</Item>
-    <Item>lkajsldfljadlkfj</Item>
-
+    <Vswiper>
+        <Item class="item">
+            <div>
+                klsaldflkaf
+            </div>
+        </Item>
+        <Item class="item">
+            <div>
+                klsaldflkaf
+            </div>
+        </Item>
+        <Item class="item">
+            <div>
+                klsaldflkaf
+            </div>
+        </Item>
+        <Item class="item">
+            <div>
+                klsaldflkaf
+            </div>
+        </Item>
     </Vswiper>
+    <div class="music">
+        <audio src="" autobuffer autoloop loop controls></audio>
+    </div>
 </div>
 
 

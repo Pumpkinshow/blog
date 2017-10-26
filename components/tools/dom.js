@@ -1,4 +1,4 @@
-define('static/components/tools/dom', function(require, exports, module) {
+define('static/components/tools/dom.es6', function(require, exports, module) {
 
   'use strict';
   
@@ -8,7 +8,7 @@ define('static/components/tools/dom', function(require, exports, module) {
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
   
-  var _staticComponentsToolsUtil = require('static/components/tools/util');
+  var _staticComponentsToolsUtil = require('static/components/tools/util.es6');
   
   var _staticComponentsToolsUtil2 = _interopRequireDefault(_staticComponentsToolsUtil);
   

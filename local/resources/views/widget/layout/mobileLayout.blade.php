@@ -2,10 +2,12 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="keywords" content="pumpkin blog"/>
-    <meta name="description" content="pumpkin 微博">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>pumpkin's blog</title>
     <link rel="icon" href="./favicon.ico" mce_href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/common.css">
@@ -17,6 +19,9 @@
 <div id="app">
     @yield("content")
 </div>
+<script>
+    window.PointerEvent = void 0;
+</script>
 @require('framework')
 @placeholder('scripts')
 </body>

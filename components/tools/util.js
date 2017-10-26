@@ -1,4 +1,4 @@
-define('static/components/tools/util', function(require, exports, module) {
+define('static/components/tools/util.es6', function(require, exports, module) {
 
   'use strict';
   
